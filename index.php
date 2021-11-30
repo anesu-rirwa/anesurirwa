@@ -37,13 +37,13 @@
             flex-direction: row;
             justify-content: center;
             position: relative;
-            top: 200px;
+            top: 150px;
         }
 
         form {
             display: flex;
-            width: 300px;
-            margin-right: 200px;
+            width: 500px;
+            justify-content: space-around;
         }
 
         input[type=submit] {
@@ -78,58 +78,16 @@
         <h1>FIFA 20 PLAYER RATING PREDICTION</h1>
     </header>
     <main>
-        <form action="config.php" method="GET">
-            <input type="search" name="search" id="search" placeholder="Search player by Name">
-            <input type="submit" name="submit" value="PREDICT">
+        <form action="{{url_for('')}}" method="GET">
+            <input type="text" name="name" placeholder="Player Name...">
+            <input type="text" name="age" placeholder="Player Age...">
+            <input type="number" name="overall" placeholder="Player Overall Score...">
+            <input type="number" name="potential" placeholder="Player Potential Score...">
+            <input type="text" name="country" placeholder="Player Nationality...">
+            <input type="text" name="club" placeholder="Player Club...">
+            <input type="text" name="value" placeholder="Player Value...">
         </form>
-        <aside id="result">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Player Name</th>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <th>Age</th>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <th>Nationality</th>
-                        <td></td>
-                    </tr>
-                        
-                    <tr>
-                        <th>Club</th>
-                        <td></td>
-                    </tr>    
-                        
-                    <tr>
-                        <th>Value</th>
-                        <td></td>
-                    </tr>  
-                    
-                    <tr>
-                        <th>Overall</th>
-                        <td></td>
-                    </tr> 
-                        
-                    <tr>
-                        <th>Potential</th>
-                        <td></td>
-                    </tr> 
-                    
-                    <tr>
-                        <th>Prediction Rating</th>
-                        <td></td>
-                    </tr>                    
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-        </aside>
+        {{ prediction_text}}
     </main>
 </body>
 </html>
