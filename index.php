@@ -34,7 +34,7 @@
 
         main {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             position: relative;
             top: 150px;
@@ -47,9 +47,14 @@
             justify-content: space-around;
         }
 
+        input[type=text] {
+            height: 2.0em;
+            margin-top: 20px;
+        }
+
         input[type=submit] {
             height: 2.3em;
-            margin-top: 100px;
+            margin-top: 20px;
         }
 
         input[type=submit]:hover {
