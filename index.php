@@ -79,7 +79,7 @@
         <h1>FIFA 20 PLAYER RATING PREDICTION</h1>
     </header>
     <main>
-        <form action="{{url_for('')}}" method="GET">
+        <form action="{{url_for('predict')}}" method="GET">
             <input type="text" name="name" placeholder="Player Name...">
             <input type="text" name="age" placeholder="Player Age...">
             <input type="number" name="overall" placeholder="Player Overall Score...">
@@ -87,6 +87,7 @@
             <input type="text" name="country" placeholder="Player Nationality...">
             <input type="text" name="club" placeholder="Player Club...">
             <input type="text" name="value" placeholder="Player Value...">
+            <input type="submit" name="submit" value="PREDICT">
         </form>
         {{ prediction_text}}
     </main>
