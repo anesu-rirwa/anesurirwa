@@ -47,6 +47,11 @@
             justify-content: space-around;
         }
 
+        input[type=number] {
+            height: 2.0em;
+            margin-top: 20px;
+        }
+
         input[type=text] {
             height: 2.0em;
             margin-top: 20px;
@@ -55,6 +60,8 @@
         input[type=submit] {
             height: 2.3em;
             margin-top: 20px;
+            width: 50%;
+            align-self: center;
         }
 
         input[type=submit]:hover {
