@@ -37,7 +37,7 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            top: 150px;
+            top: 50px;
         }
 
         form {
