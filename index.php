@@ -38,6 +38,7 @@
             justify-content: center;
             position: relative;
             top: 50px;
+            margin-left: 25px;
         }
 
         form {
@@ -70,19 +71,10 @@
             background-color: #ccc;
         } 
 
-        th, td {
-            color: rgb(239, 239, 239);
-            font-size: 1.5em;
-        }
-
-        table, th, td {
-            border: 2px solid black;
-        }
-
-        table {
-            display: table;
-            border-collapse: collapse;
-            height: 180px;
+        h2 {
+            font-size: 1.4em;
+            color: #ccc;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -101,7 +93,7 @@
             <input type="text" name="value" placeholder="Player Value...">
             <input type="submit" name="submit" value="PREDICT">
         </form>
-        {{ prediction_text}}
+        <h2>{{ prediction_text}}</h2>
     </main>
 </body>
 </html>
