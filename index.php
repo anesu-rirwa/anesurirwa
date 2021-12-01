@@ -83,7 +83,7 @@
         <h1>FIFA 20 PLAYER RATING PREDICTION</h1>
     </header>
     <main>
-        <form action="{{url_for('predict')}}" method="POST">
+        <form action="index.php" method="POST">
             <input type="text" name="name" placeholder="Player Name...">
             <input type="text" name="age" placeholder="Player Age...">
             <input type="number" name="overall" placeholder="Player Overall Score...">
