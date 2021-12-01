@@ -58,14 +58,14 @@
             margin-top: 20px;
         }
 
-        input[type=submit] {
+        button[type=submit] {
             height: 2.3em;
             margin-top: 20px;
             width: 50%;
             align-self: center;
         }
 
-        input[type=submit]:hover {
+        button[type=submit]:hover {
             font-weight: bold;
             cursor: pointer;
             background-color: #ccc;
@@ -75,6 +75,11 @@
             font-size: 1.4em;
             color: #ccc;
             margin-top: 15px;
+        }
+
+        #label {
+            font-size: 1.4rem;
+            color: #ccc
         }
     </style>
 </head>
@@ -95,17 +100,19 @@
         </form>
         <h2>The player predicted rating is <label id="label"></label></h2>
     </main>
-    <script type="text/javascript">
-        let overall = document.getElementById('overall');
-        let potential = document.getElementById('potential');
-        let button = document.getElementById('').addEventListener('click', predict)
+    <?php
+    echo '<script type="text/JavaScript">
+        let overall = document.getElementById("overall");
+        let potential = document.getElementById("potential");
+        let button = document.getElementById("button").addEventListener("click", predict)
 
         function predict(e) {
             e.preventDefault();
             let avg = (overall + potential) / 2;
-            document.getElementById('label').textContent = avg;
+            document.getElementById("label").textContent = avg;
         }
 
-    </script>
+    </script>';
+    ?>
 </body>
 </html>
