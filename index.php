@@ -103,13 +103,14 @@
     </main>
     <?php
     echo '<script type="text/JavaScript">
-        let overall = document.getElementById("overall");
-        let potential = document.getElementById("potential");
+        let overall = document.getElementById("overall").value;
+        let potential = document.getElementById("potential").value;
         let button = document.getElementById("button").addEventListener("click", predict)
 
         function predict(e) {
             e.preventDefault();
-            let avg = (overall + potential) / 2;
+            let avg;
+            avg = (overall + potential) / 2;
             document.getElementById("label").textContent = avg;
         }
 
