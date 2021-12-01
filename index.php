@@ -126,7 +126,7 @@
             e.preventDefault();
             let avg;
             avg = ((overall*1 + potential*1) / 2);
-            document.getElementById("label").textContent = overall;
+            document.getElementById("label").innerHTML = overall;
         }
     </script>';
     ?>
