@@ -118,15 +118,14 @@
     </main>
     <?php
     echo '<script type="text/JavaScript">
-        let overall = parseInt(document.getElementById("overall").value);
-        let potential = parseInt(document.getElementById("potential").value);
+        let overall = document.getElementById("overall").value;
+        let potential = document.getElementById("potential").value;
         let button = document.getElementById("button").addEventListener("click", predict)
 
         function predict(e) {
             e.preventDefault();
-            let avg = 0;
-            avg = ((overall*1 + potential*1) / 2);
-            document.getElementById("label").value = avg;
+            let avg = ((overall*1 + potential*1) / 2);
+            document.getElementById("label").textContent = avg;
         }
     </script>';
     ?>
