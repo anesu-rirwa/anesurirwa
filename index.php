@@ -78,9 +78,9 @@
             margin-top: 15px;
         }
 
-        #label {
-            font-size: 1.4rem;
-            color: #ccc;
+        label {
+            font-size: 2rem;
+            color: red;
         }
     </style>
 </head>
@@ -111,7 +111,7 @@
             e.preventDefault();
             let avg;
             avg = (overall + potential) / 2;
-            document.getElementById("label").textContent = avg;
+            document.getElementById("label").value = avg;
         }
 
     </script>';
