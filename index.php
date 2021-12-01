@@ -86,14 +86,26 @@
         <form action="index.php" method="POST">
             <input type="text" name="name" placeholder="Player Name...">
             <input type="text" name="age" placeholder="Player Age...">
-            <input type="number" name="overall" placeholder="Player Overall Score...">
-            <input type="number" name="potential" placeholder="Player Potential Score...">
+            <input type="number" name="overall" placeholder="Player Overall Score..." id="overall">
+            <input type="number" name="potential" placeholder="Player Potential Score..." id="potential">
             <input type="text" name="country" placeholder="Player Nationality...">
             <input type="text" name="club" placeholder="Player Club...">
             <input type="text" name="value" placeholder="Player Value...">
-            <input type="submit" name="submit" value="PREDICT">
+            <button type="button" id="button">PREDICT</button>
         </form>
-        <h2>{{ prediction_text}}</h2>
+        <h2>The player predicted rating is <label id="label"></label></h2>
     </main>
+    <script type="text/javascript">
+        let overall = document.getElementById('overall');
+        let potential = document.getElementById('potential');
+        let button = document.getElementById('').addEventListener('click', predict)
+
+        function predict(e) {
+            e.preventDefault();
+            let avg = (overall + potential) / 2;
+            document.getElementById('label').textContent = avg;
+        }
+
+    </script>
 </body>
 </html>
