@@ -79,7 +79,7 @@
         }
 
         label {
-            font-size: 2rem;
+            font-size: 2.4rem;
             color: red;
         }
     </style>
@@ -110,7 +110,7 @@
         function predict(e) {
             e.preventDefault();
             let avg;
-            avg = (overall + potential) / 2;
+            avg = average(overall, potential);
             document.getElementById("label").textContent = avg;
         }
 
