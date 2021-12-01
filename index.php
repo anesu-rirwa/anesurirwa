@@ -66,11 +66,25 @@
             margin-top: 15px;
         }
 
-        button {
+        button:hover {
             font-weight: bold;
             cursor: pointer;
             background-color: #ccc;
         } 
+
+        input[type=reset] {
+            height: 2.3em;
+            margin-top: 20px;
+            width: 50%;
+            align-self: center;
+            margin-top: 15px;
+        }
+
+        input[type=reset]:hover {
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #ccc;
+        }
 
         h2 {
             font-size: 1.4em;
@@ -98,6 +112,7 @@
             <input type="text" name="club" placeholder="Player Club...">
             <input type="text" name="value" placeholder="Player Value...">
             <button type="button" id="button">PREDICT</button>
+            <input type="reset" name="reset" value="RESET">
         </form>
         <h2>The player predicted rating is: <label id="label"></label></h2>
     </main>
@@ -110,10 +125,9 @@
         function predict(e) {
             e.preventDefault();
             let avg;
-            avg = average(overall, potential);
+            avg = ((overall*1 + potential*1) / 2);
             document.getElementById("label").textContent = avg;
         }
-
     </script>';
     ?>
 </body>
