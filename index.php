@@ -58,14 +58,15 @@
             margin-top: 20px;
         }
 
-        button[type=submit] {
+        button {
             height: 2.3em;
             margin-top: 20px;
             width: 50%;
             align-self: center;
+            margin-top: 15px;
         }
 
-        button[type=submit]:hover {
+        button {
             font-weight: bold;
             cursor: pointer;
             background-color: #ccc;
@@ -79,7 +80,7 @@
 
         #label {
             font-size: 1.4rem;
-            color: #ccc
+            color: #ccc;
         }
     </style>
 </head>
