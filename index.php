@@ -99,7 +99,7 @@
             <input type="text" name="value" placeholder="Player Value...">
             <button type="button" id="button">PREDICT</button>
         </form>
-        <h2>The player predicted rating is <label id="label"></label></h2>
+        <h2>The player predicted rating is: <label id="label"></label></h2>
     </main>
     <?php
     echo '<script type="text/JavaScript">
@@ -111,7 +111,7 @@
             e.preventDefault();
             let avg;
             avg = (overall + potential) / 2;
-            document.getElementById("label").value = avg;
+            document.getElementById("label").textContent = avg;
         }
 
     </script>';
